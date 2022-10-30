@@ -1,8 +1,13 @@
 package org.example.model;
 
-public abstract class MeasureValues {
+public class MeasureValues {
     private Measurable name;
-    private long value;
+    private double value;
+
+    public MeasureValues(Measurable name, double value) {
+        this.name = name;
+        this.value = value;
+    }
 
     public Measurable getName() {
         return name;
@@ -12,11 +17,11 @@ public abstract class MeasureValues {
         this.name = name;
     }
 
-    public long getValue() {
+    public double getValue() {
         return value;
     }
 
-    public void setValue(long value) {
+    public void setValue(double value) {
         this.value = value;
     }
 }
