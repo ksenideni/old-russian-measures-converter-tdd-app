@@ -1,20 +1,15 @@
 package org.example;
 
-import static org.junit.Assert.assertTrue;
+import org.example.model.LengthMeasure;
+import org.example.model.MeasureValues;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
+public class AppTest {
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void convert_VerstToMeter() {
+        MeasureValues result = App.convert(LengthMeasure.VERST, LengthMeasure.METER, 5);
+        assertEquals(5334, result.getValue());
     }
 }
